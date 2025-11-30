@@ -1,73 +1,85 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über mich</title>
-    <link rel="stylesheet" href="/css/about.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Über mich</title>
+  <link rel="stylesheet" href="/css/about.css"/>
 </head>
 <body>
+  <header class="hero">
+    <h1 class="fade-in">Cedric Gärtner</h1>
+    <p class="fade-in delay-1">Wirtschaftsinformatiker / Softwareentwicklung & IT-Security</p>
+  </header>
 
-    <div class="hero">
-        <h1 class="fade-in">Cedric Gärtner</h1>
-        <p class="fade-in delay-1">Wirtschaftsinformatiker | Webentwickler | Technik-Enthusiast</p>
-    </div>
+  <main class="container">
+    <section class="about-section fade-in delay-2">
+      <h2>Wer ich bin</h2>
+      <p>
+        Ich studiere Wirtschaftsinformatik mit Schwerpunkt Softwareentwicklung und beschäftige mich intensiv mit IT-Security, Automatisierung und moderner Infrastruktur.
+        In eigenen Server und Container-Umgebungen setze ich Ideen praktisch um von der ersten Code-Zeile bis zur stabilen Produktivlösung. Mein Fokus liegt darauf, Systeme sicher, wartbar und alltagstauglich zu gestalten.
+      </p>
+    </section>
 
-    <div class="container">
-        <section class="about-section fade-in delay-2">
-            <h2>Wer ich bin</h2>
-            <p>Technologie, Sport und Musik begleiten mich schon mein ganzes Leben. Ich bin Wirtschaftsinformatiker mit einem tiefen Interesse für Softwareentwicklung, IT-Architektur und digitale Prozesse.</p>
-        </section>
+    <div class="divider"></div>
 
-        <div class="divider"></div>
+    <section class="about-section fade-in delay-3">
+      <h2>Praktische Erfahrungen</h2>
+      <ul class="bullet two-col">
+        <li><strong>Softwareentwicklung:</strong> Python, JavaScript/Node.js (Express, Marko.js)</li>
+        <li><strong>Web:</strong> REST-APIs, SSR, Auth, Middleware</li>
+        <li><strong>Infra:</strong> Docker/Compose, Linux, Reverse Proxy (Nginx)</li>
+        <li><strong>Automation:</strong> CI-Gedanken, Scripting, Cron/PM2</li>
+        <li><strong>Smart Home:</strong> Home Assistant, YAML/Blueprints, MQTT, Zigbee2MQTT</li>
+        <li><strong>Datenbanken:</strong> MariaDB/MySQL, grundlegende Modellierung & Tuning</li>
+      </ul>
+    </section>
 
-        <section class="about-section fade-in delay-3">
-            <h2>Meine Stärken</h2>
-            <ul>
-                <li>Problemlösung & analytisches Denken</li>
-                <li>IT & Softwareentwicklung (Python, Node.js, Webentwicklung)</li>
-                <li>Strukturierte Arbeitsweise & Teamfähigkeit</li>
-                <li>Langjährige Erfahrung im Leistungssport</li>
-            </ul>
-        </section>
+    <div class="divider"></div>
 
-        <div class="divider"></div>
+    <section class="about-section fade-in delay-4">
+      <h2>Aktuelle Projekte</h2>
+      <ul class="bullet">
+        <li>Eigene Docker-Services (z. B. Wiki.js, Nextcloud, Plex, Uptime Kuma) hinter Nginx-Proxy</li>
+        <li>Home-Assistant-Automatisierungen (Licht, Energie, Sensorik) mit individuellen Skripten</li>
+        <li>Monitoring & Logging für Homelab-Dienste (Health-Checks, Benachrichtigungen)</li>
+      </ul>
+    </section>
 
-        <section class="about-section fade-in delay-4">
-            <h2>Technische Erfahrungen</h2>
-            <p>Ich habe mich schon früh für IT begeistert – von der Programmierung in Python & JavaScript, über Datenbanken, bis hin zur Server-Administration. Auch in der Foto- und Videobearbeitung kenne ich mich gut aus.</p>
-        </section>
+    <div class="divider"></div>
 
-        <div class="divider"></div>
+    <section class="about-section fade-in delay-6">
+      <h2>Tools & Workflow</h2>
+      <ul class="bullet two-col">
+        <li>Git & GitHub (Issues, PRs)</li>
+        <li>PM2 für Node-Deployments</li>
+        <li>VS Code + Linters</li>
+        <li>Shell-Scripting</li>
+        <li>Docker/Compose</li>
+        <li>Nginx Proxy Manager</li>
+	<li>n8n für Automations & Integrationen </li>
+      </ul>
+    </section>
 
-        <section class="about-section fade-in delay-5">
-            <h2>Mein sportlicher Werdegang</h2>
-            <p>Ich war über 15 Jahre im Skilanglauf aktiv und konnte dabei deutschlandweit Erfolge erzielen. Meine größten Erfolge:</p>
-            <ul>
-                <li>Platz 19 im Deutschlandpokal 2021/2022</li>
-                <li>Platz 3 bei den Sachsenmeisterschaften Rollski 2020/2021</li>
-                <li>Platz 1 bei den Sachsenmeisterschaften 2017/2018</li>
-                <li>Platz 33 im Gesamtdeutschen Schülercup</li>
-            </ul>
-        </section>
+    <div class="divider"></div>
 
-        <div class="divider"></div>
+    <section class="about-section fade-in delay-7">
+      <h2>Ziele</h2>
+      <p>
+        Spezialisierung auf IT-Security, sichere Softwareentwicklung und Cloud Security.
+        Mein Schwerpunkt liegt auf robusten Systemarchitekturen, automatisierten Deployments und praxisnahen Security-Best-Practices, die sowohl technisch sauber als auch realistisch umsetzbar sind.
+      </p>
+    </section>
 
-        <section class="about-section fade-in delay-6">
-            <h2>Musik & Kreativität</h2>
-            <p>Neben IT und Sport spielt Musik eine große Rolle in meinem Leben. Ich habe mehrere Instrumente gespielt, darunter **Keyboard, Gitarre und Klarinette**.</p>
-        </section>
+    <nav class="cta-row">
+      <a href="/" class="glow-button">Zurück zur Startseite</a>
+    </nav>
+  </main>
 
-        <div class="divider"></div>
+  <footer class="footer">
+    <p>&copy; 2025 Cedric Gärtner | <a href="/impressum">Impressum</a></p>
+  </footer>
 
-        <section class="about-section fade-in delay-7">
-            <h2>Let’s connect</h2>
-            <p>Du willst mehr wissen oder mit mir zusammenarbeiten? Schau auf meinen Social-Media-Profilen vorbei oder schreib mir eine Nachricht.</p>
-        </section>
-
-        <a href="/" class="glow-button">Zurück zur Startseite</a>
-    </div>
-
-    <script src="/js/script.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 </html>

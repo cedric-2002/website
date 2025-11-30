@@ -1,20 +1,24 @@
+const path = require("path");
 const express = require("express");
 const app = express();
-const PORT = 3000;
 
-// Statische Dateien bereitstellen
-app.use(express.static("public"));
+const PORT = process.env.PORT || 3000;
 
-// Startseite
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/views/index.html");
+// Statische Dateien
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/", (_, res) => {
+    res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 
-// Über mich Seite
-app.get("/about", (req, res) => {
-    res.sendFile(__dirname + "/views/about.html");
+app.get("/about", (_, res) => {
+    res.sendFile(path.join(__dirname, "views", "about.html"));
+});
+
+app.get("/impressum", (_, res) => {
+    res.sendFile(path.join(__dirname, "views", "impressum.html"));
 });
 
 app.listen(PORT, () => {
-    console.log(`🚀 Server läuft auf http://localhost:${PORT}`);
+    console.log(`Website läuft auf Port ${PORT}`);
 });
