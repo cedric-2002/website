@@ -5,3 +5,8 @@ npm-debug.log*
 *.log
 .env
 .env.local
+update.sh
+docker-compose.yml
+docker-compose.override.yml
+docker-compose.server.yml
+.env
