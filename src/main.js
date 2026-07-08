@@ -100,7 +100,6 @@ document.querySelector("#app").innerHTML = `
   <main>
     <section class="hero section-shell reveal" id="start">
       <div class="hero-copy">
-        <p class="eyebrow">Developer Portfolio</p>
         <h1>${profile.name}</h1>
         <p class="hero-role">${profile.role}</p>
         <p class="hero-text">${profile.intro}</p>
