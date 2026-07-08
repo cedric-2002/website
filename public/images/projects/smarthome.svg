@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Smart home automation visual</title>
+  <desc id="desc">Abstract house interface with sensors and connected nodes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#0f141a"/>
+      <stop offset="1" stop-color="#111318"/>
+    </linearGradient>
+    <linearGradient id="home" x1="0" x2="1">
+      <stop stop-color="#23d7c5"/>
+      <stop offset="1" stop-color="#f2b84b"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <circle cx="760" cy="120" r="160" fill="#f1728b" opacity=".12"/>
+  <circle cx="170" cy="470" r="190" fill="#23d7c5" opacity=".1"/>
+  <path d="M238 318 480 132l242 186v188H238z" fill="#171d27" stroke="#ffffff24" stroke-width="4"/>
+  <path d="M198 330 480 112l282 218" fill="none" stroke="url(#home)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="418" y="350" width="124" height="156" rx="18" fill="#0a0d11" stroke="#ffffff22"/>
+  <rect x="282" y="350" width="88" height="76" rx="12" fill="#0a0d11" stroke="#ffffff22"/>
+  <rect x="590" y="350" width="88" height="76" rx="12" fill="#0a0d11" stroke="#ffffff22"/>
+  <g fill="none" stroke="#8bdc79" stroke-width="5" opacity=".9">
+    <path d="M326 260h-98c-48 0-72-24-72-72v-24"/>
+    <path d="M634 260h98c48 0 72-24 72-72v-24"/>
+    <path d="M480 230v-92"/>
+  </g>
+  <g fill="#171d27" stroke="#ffffff28" stroke-width="4">
+    <circle cx="156" cy="140" r="54"/>
+    <circle cx="804" cy="140" r="54"/>
+    <circle cx="480" cy="98" r="54"/>
+  </g>
+  <g fill="#23d7c5">
+    <circle cx="156" cy="140" r="12"/>
+    <circle cx="804" cy="140" r="12"/>
+    <circle cx="480" cy="98" r="12"/>
+  </g>
+  <rect x="346" y="536" width="268" height="20" rx="10" fill="#ffffff20"/>
+</svg>

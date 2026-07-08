@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Homelab server dashboard</title>
+  <desc id="desc">Abstract dashboard with server racks and status cards.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#10141c"/>
+      <stop offset="1" stop-color="#0a0d11"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop stop-color="#23d7c5"/>
+      <stop offset="1" stop-color="#8bdc79"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <g opacity=".22" stroke="#fff">
+    <path d="M0 120h960M0 240h960M0 360h960M0 480h960"/>
+    <path d="M160 0v600M320 0v600M480 0v600M640 0v600M800 0v600"/>
+  </g>
+  <rect x="92" y="90" width="300" height="420" rx="18" fill="#171d27" stroke="#ffffff22"/>
+  <g fill="#0d1118" stroke="#ffffff24">
+    <rect x="120" y="126" width="244" height="58" rx="10"/>
+    <rect x="120" y="208" width="244" height="58" rx="10"/>
+    <rect x="120" y="290" width="244" height="58" rx="10"/>
+    <rect x="120" y="372" width="244" height="58" rx="10"/>
+  </g>
+  <g fill="url(#accent)">
+    <circle cx="152" cy="155" r="8"/>
+    <circle cx="152" cy="237" r="8"/>
+    <circle cx="152" cy="319" r="8"/>
+    <circle cx="152" cy="401" r="8"/>
+  </g>
+  <rect x="466" y="112" width="356" height="112" rx="18" fill="#171d27" stroke="#ffffff22"/>
+  <rect x="466" y="254" width="356" height="112" rx="18" fill="#171d27" stroke="#ffffff22"/>
+  <rect x="466" y="396" width="356" height="112" rx="18" fill="#171d27" stroke="#ffffff22"/>
+  <path d="M506 184c42-78 98-16 136-46s86-38 132 34" fill="none" stroke="#23d7c5" stroke-width="12" stroke-linecap="round"/>
+  <path d="M506 325h70l38-42 45 54 42-28h82" fill="none" stroke="#8bdc79" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#f2b84b">
+    <rect x="506" y="436" width="52" height="34" rx="8"/>
+    <rect x="580" y="422" width="52" height="48" rx="8"/>
+    <rect x="654" y="402" width="52" height="68" rx="8"/>
+    <rect x="728" y="380" width="52" height="90" rx="8"/>
+  </g>
+</svg>

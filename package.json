@@ -1,16 +1,16 @@
 {
-  "name": "website",
-  "version": "1.0.0",
-  "main": "server.js",
+  "name": "cedric-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "start": "vite --host 0.0.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^4.21.2"
-  }
+    "vite": "^7.0.2"
+  },
+  "devDependencies": {}
 }
