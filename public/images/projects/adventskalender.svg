@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Adventskalender-App</title>
+  <desc id="desc">Digital advent calendar interface with doors and playful elements.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#10141c"/>
+      <stop offset="1" stop-color="#0a0d11"/>
+    </linearGradient>
+    <linearGradient id="door" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#f1728b"/>
+      <stop offset="1" stop-color="#f2b84b"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <circle cx="208" cy="150" r="130" fill="#f1728b" opacity=".13"/>
+  <circle cx="768" cy="440" r="180" fill="#23d7c5" opacity=".1"/>
+  <rect x="112" y="86" width="736" height="428" rx="24" fill="#171d27" stroke="#ffffff22"/>
+  <g transform="translate(160 130)">
+    <rect width="128" height="108" rx="16" fill="url(#door)"/>
+    <rect x="172" width="128" height="108" rx="16" fill="#0a0d11" stroke="#ffffff22"/>
+    <rect x="344" width="128" height="108" rx="16" fill="#0a0d11" stroke="#ffffff22"/>
+    <rect x="516" width="128" height="108" rx="16" fill="#0a0d11" stroke="#ffffff22"/>
+    <rect y="146" width="128" height="108" rx="16" fill="#0a0d11" stroke="#ffffff22"/>
+    <rect x="172" y="146" width="128" height="108" rx="16" fill="url(#door)"/>
+    <rect x="344" y="146" width="128" height="108" rx="16" fill="#0a0d11" stroke="#ffffff22"/>
+    <rect x="516" y="146" width="128" height="108" rx="16" fill="#0a0d11" stroke="#ffffff22"/>
+    <rect y="292" width="128" height="108" rx="16" fill="#0a0d11" stroke="#ffffff22"/>
+    <rect x="172" y="292" width="128" height="108" rx="16" fill="#0a0d11" stroke="#ffffff22"/>
+    <rect x="344" y="292" width="128" height="108" rx="16" fill="url(#door)"/>
+    <rect x="516" y="292" width="128" height="108" rx="16" fill="#0a0d11" stroke="#ffffff22"/>
+  </g>
+  <g fill="#ffffff" opacity=".9" font-family="Arial, sans-serif" font-size="42" font-weight="700">
+    <text x="206" y="198">1</text>
+    <text x="378" y="198">8</text>
+    <text x="550" y="198">14</text>
+    <text x="718" y="198">20</text>
+    <text x="202" y="344">5</text>
+    <text x="374" y="344">12</text>
+    <text x="546" y="344">18</text>
+    <text x="718" y="344">23</text>
+    <text x="202" y="490">7</text>
+    <text x="374" y="490">16</text>
+    <text x="546" y="490">24</text>
+    <text x="718" y="490">25</text>
+  </g>
+  <path d="M444 92c22 40 48 40 72 0" fill="none" stroke="#23d7c5" stroke-width="12" stroke-linecap="round"/>
+</svg>
