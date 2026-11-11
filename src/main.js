@@ -1,4 +1,6 @@
+import { experiencePage, caseStudies, initExperience } from "./experience.js";
 import "./styles.css";
+import "./pages.css";
 
 const profile = {
   name: "Cedric Gärtner",
@@ -352,94 +354,18 @@ const renderFooter = () => `
   </footer>
 `;
 
-const homePage = () => `
-  <main>
-    <section class="hero section-shell reveal page-view">
-      <div class="hero-copy">
-        <p class="section-kicker">Developer Portfolio</p>
-        <h1 class="hero-title" data-text="${profile.name}">${profile.name}</h1>
-        <p class="hero-role">${profile.role}</p>
-        <p class="hero-text">${profile.intro}</p>
-        <div class="hero-actions">
-          <a class="button primary internal-link" href="/projects">Projekte ansehen</a>
-          <a class="button ghost internal-link" href="/contact">Kontakt aufnehmen</a>
-        </div>
-      </div>
-      <aside class="profile-panel" aria-label="Kurzprofil">
-        <img src="${profile.image}" alt="Profilbild von ${profile.name}" />
-        <div>
-          <strong>Focus</strong>
-          <span>Webentwicklung, Docker, IT-Security, Automatisierung</span>
-        </div>
-        <div class="floating-stack" aria-label="Tech Highlights">
-          <span>Vite</span>
-          <span>Docker</span>
-          <span>Security</span>
-          <span>Selfhosting</span>
-        </div>
-      </aside>
-    </section>
-
-    <section class="section-shell split-section reveal">
-      <div>
-        <p class="section-kicker">Profil</p>
-        <h2>Software, Infrastruktur und Security-Denken in einem Profil.</h2>
-      </div>
-      <div class="rich-text">
-        <p>
-          Ich entwickle Anwendungen von der ersten Idee bis zum Betrieb: Struktur planen, Benutzeroberflächen gestalten, Backend-Logik umsetzen, Datenbanken einbinden und Dienste auf eigener Infrastruktur betreiben.
-        </p>
-        <p>
-          Meine Projekte sind oft privat oder intern. Genau deshalb zeige ich sie als seriöse Cases: mit Ziel, Rolle, Technologie und Wirkung, ohne vertrauliche Details offenzulegen.
-        </p>
-      </div>
-    </section>
-
-    <section class="section-shell reveal">
-      <div class="section-heading">
-        <p class="section-kicker">Spezielle Fähigkeiten</p>
-        <h2>Programmierkenntnisse und praktische Webentwicklung.</h2>
-      </div>
-      <div class="detail-grid">
-        ${specialSkills.slice(0, 4).map((skill) => renderSpecialSkill(skill)).join("")}
-      </div>
-    </section>
-
-    <section class="section-shell reveal">
-      <div class="section-heading section-heading-row">
-        <div>
-          <p class="section-kicker">Ausgewählte Cases</p>
-          <h2>Kuratierte Projekte, professionell erklärt.</h2>
-        </div>
-        <a class="button ghost internal-link" href="/projects">Alle Projekte</a>
-      </div>
-      <div class="project-grid featured-projects">
-        ${projects.slice(0, 2).map((project) => renderProject(project)).join("")}
-      </div>
-    </section>
-
-    <section class="section-shell social-section reveal">
-      <div>
-        <p class="section-kicker">Connect</p>
-        <h2>Mehr von mir findest du hier.</h2>
-        <p>Code, Netzwerk und Einblicke in Projekte und Technik.</p>
-      </div>
-      <div class="social-icon-grid">
-        ${profile.links.map((link) => renderSocialLink(link)).join("")}
-      </div>
-    </section>
-  </main>
-`;
+const homePage = () => experiencePage(profile);
 
 const projectsPage = () => `
   <main class="page-view">
     <section class="page-hero section-shell reveal">
       <p class="section-kicker">Projekte</p>
-      <h1>Kuratierte Projekt-Cases ohne öffentlichen Quellcode.</h1>
+      <h1>Von der Idee zum laufenden System.</h1>
       <p>
         Ich zeige nur ausgewählte Arbeiten, die meine Fähigkeiten am besten abbilden: interne Webanwendungen, digitale Produkte, Automatisierung und selbst betriebene Infrastruktur.
       </p>
     </section>
+    ${caseStudies()}
     <section class="section-shell project-page-section">
       <div class="project-grid">
         ${projects.map((project) => renderProject(project)).join("")}
@@ -452,7 +378,7 @@ const aboutPage = () => `
   <main class="page-view">
     <section class="page-hero section-shell reveal">
       <p class="section-kicker">Über mich</p>
-      <h1>Ich verbinde Entwicklung, Betrieb und Security-Mindset.</h1>
+      <h1>Software bauen. Systeme verstehen.</h1>
       <p>
         Ich bin Wirtschaftsinformatik-Student mit Schwerpunkt Softwareentwicklung und baue moderne Webanwendungen, interne Tools und eigene Infrastrukturprojekte.
       </p>
@@ -529,7 +455,7 @@ const contactPage = () => `
   <main class="page-view">
     <section class="page-hero section-shell reveal">
       <p class="section-kicker">Kontakt</p>
-      <h1>Lass uns über Webentwicklung, Infrastruktur oder Security sprechen.</h1>
+      <h1>Die nächste Verbindung.</h1>
       <p>Schreib mir gern direkt per Mail oder schau auf meinen Profilen vorbei.</p>
     </section>
 
@@ -607,12 +533,12 @@ const bindNavigation = () => {
   document.querySelectorAll(".internal-link").forEach((link) => {
     link.addEventListener("click", (event) => {
       const url = new URL(link.href);
-      if (url.origin !== window.location.origin) return;
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || url.origin !== window.location.origin) return;
 
       event.preventDefault();
       nav.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", "false");
-      navigate(url.pathname);
+      navigate(url.pathname + url.hash);
     });
   });
 };
@@ -656,20 +582,27 @@ const revealContent = () => {
   document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 };
 
+let cleanupExperience = () => {};
+
 const render = (path = normalizePath(window.location.pathname)) => {
+  cleanupExperience();
+  document.body.classList.toggle("static-page",path !== "/");
   document.title = routeTitles[path];
   app.innerHTML = `${renderHeader(path)}${routes[path]()}${renderFooter()}`;
   document.querySelector("#year").textContent = new Date().getFullYear();
   bindNavigation();
   bindContactForm();
-  revealContent();
+  if (path === "/") revealContent();
   window.scrollTo(0, 0);
+  cleanupExperience = initExperience();
+  if (window.location.hash) requestAnimationFrame(() => document.getElementById(window.location.hash.slice(1))?.scrollIntoView());
 };
 
 const navigate = (path) => {
-  const nextPath = normalizePath(path);
-  if (nextPath !== window.location.pathname) {
-    window.history.pushState({}, "", nextPath);
+  const url = new URL(path, window.location.origin);
+  const nextPath = normalizePath(url.pathname);
+  if (nextPath + url.hash !== window.location.pathname + window.location.hash) {
+    window.history.pushState({}, "", nextPath + url.hash);
   }
   render(nextPath);
 };

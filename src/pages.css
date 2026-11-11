@@ -1,0 +1,45 @@
+/* Shared finish; detail pages render fully assembled from the first frame. */
+:root{--cyan:#b5e7bd;--green:#b5e7bd;--text:#eef2ef;--muted:#adb7b4;--line:#ffffff20}
+html{scroll-behavior:auto}
+body{background:#000}
+body::before,body::after{display:none}
+.site-header{background:#000f;border-bottom:1px solid var(--line);box-shadow:none}
+.brand{font-weight:500}
+.brand-mark{background:none;border:1px solid #b5e7bd50;border-radius:2px;box-shadow:none}
+.site-nav a{font-weight:400;border-radius:2px}
+.site-nav a.is-active{background:#b5e7bd12;color:var(--cyan)}
+.static-page .reveal,.static-page .page-view{opacity:1;transform:none;animation:none;transition:none}
+.static-page main{padding-bottom:55px}
+.static-page .section-shell{width:min(1240px,calc(100% - 80px));margin-left:auto;margin-right:auto}
+.static-page .page-hero{padding-top:145px;padding-bottom:55px;border-bottom:1px solid var(--line)}
+.static-page h1{font-size:clamp(42px,6.3vw,86px);font-weight:500;letter-spacing:-.06em;line-height:1.06;max-width:950px;text-wrap:balance}
+.static-page h2{font-size:clamp(28px,3.5vw,48px);font-weight:500;letter-spacing:-.045em;line-height:1.15}
+.static-page h3{font-weight:500;letter-spacing:-.02em}
+.static-page .section-kicker{color:var(--cyan);font:11px/1.6 ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase}
+.static-page .page-hero>p:not(.section-kicker){max-width:680px;color:var(--muted);font-size:17px;line-height:1.8}
+.static-page .case-study{padding-top:55px;padding-bottom:45px;border-bottom:1px solid var(--line);border-top:0}
+.static-page .case-study>img{background:#0a0f0c;border:1px solid var(--line);padding:20px;border-radius:2px}
+.static-page .case-study-grid{gap:35px}
+.static-page .project-grid{gap:24px}
+.static-page .project-card,.static-page .detail-card,.static-page .credential-card,.static-page .contact-card,.static-page .tech-stack-group,.static-page .timeline-item,.static-page .impressum{background:#090d0b;border:1px solid var(--line);border-radius:2px;box-shadow:none;transform:none;transition:none}
+.static-page .project-card::before,.static-page .detail-card::before,.static-page .credential-card::before,.static-page .tech-stack-group::before{display:none}
+.static-page .project-card img{border-radius:0;filter:saturate(.65)}
+.static-page .project-title-row{align-items:start;gap:16px}
+.static-page .project-title-row>span,.static-page .private-badge{color:var(--cyan);background:transparent;border:1px solid #b5e7bd30;border-radius:2px;font:11px/1.6 ui-monospace,monospace}
+.static-page .tag-row span,.static-page .feature-list span,.static-page .mini-badge{background:#b5e7bd09;border:1px solid #b5e7bd20;border-radius:2px;color:#bbc9bf;box-shadow:none;animation:none}
+.static-page .detail-card,.static-page .credential-card,.static-page .tech-stack-group{padding:28px}
+.static-page .timeline{border-color:#b5e7bd50}
+.static-page .timeline-item{padding:24px}
+.static-page .timeline-item::before{background:var(--cyan);box-shadow:none}
+.static-page .button{border-radius:2px;box-shadow:none;font-weight:500;transform:none;transition:background .15s}
+.static-page .button.primary{background:var(--cyan);color:#000;border:1px solid var(--cyan)}
+.static-page .button.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.static-page .button:hover{background:#c9f1cf;color:#000}
+.static-page input,.static-page textarea{background:#000;border:1px solid #ffffff30;border-radius:2px;color:var(--text);box-shadow:none}
+.static-page input:focus,.static-page textarea:focus{border-color:var(--cyan);outline:1px solid var(--cyan)}
+.static-page .contact-layout{gap:40px;align-items:start}
+.static-page .impressum{margin-top:135px;padding:35px;overflow-wrap:anywhere}
+.static-page a:focus-visible,.static-page button:focus-visible{outline:2px solid var(--cyan);outline-offset:5px}
+.site-footer{width:min(1240px,calc(100% - 80px));font-size:13px}
+.site-footer a{font-weight:400}
+@media(max-width:760px){.static-page .section-shell,.site-footer{width:calc(100% - 40px)}.static-page .page-hero{padding-top:110px;padding-bottom:35px}.static-page h1{font-size:44px}.static-page .case-study{padding-top:35px;padding-bottom:30px}.static-page .case-study-grid{gap:15px}.static-page .detail-card,.static-page .credential-card,.static-page .tech-stack-group{padding:22px}.static-page .contact-layout{gap:24px}.static-page .impressum{padding:24px;margin-top:105px}.static-page .project-title-row{flex-wrap:wrap}}
